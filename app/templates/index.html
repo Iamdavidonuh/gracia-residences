@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css' )}}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tiny-slider.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css' )}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' )}}" />
+
+    <title>
+        Gracia Residences
+    </title>
+</head>
+
+<body>
+
+
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="site-nav">
+        <div class="container">
+            <div class="menu-bg-wrap">
+                <div class="site-navigation">
+                    <a href="index.html" class="logo m-0 float-start">Property</a>
+
+                    <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <!-- <li><a href="#services">Services</a></li> -->
+                        <li><a href="#about-us">About</a></li>
+                        <li><a href="#testimonials">Customers</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+
+                    <a href="#"
+                        class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+                        data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Nav -->
+
+    <!-- SLide maybe -->
+
+    <div class="hero">
+        <div class="hero-slide">
+            {% for index in range(1,4)%}
+            <div class="img overlay"
+                style="background-image: url('{{ url_for('static', filename='images/')}}hero_bg_{{index}}.jpg')">
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-9 text-center">
+                    <h1 class="heading" data-aos="fade-up">
+                        Easiest way to find your dream home
+                    </h1>
+                    <div class="narrow-w form-search d-flex mb-3 justify-content-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <a value="Learn More" class=" d-block btn btn-primary" href="#about-us"> LEARN MORE </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End slide maybe -->
+
+
+    <!-- about us -->
+    <div id="about-us">
+        <div class="section">
+            <div class="container">
+                <div class="row text-left mb-5">
+                    <div class="col-12">
+                        <h2 class="font-weight-bold heading text-primary mb-4">About Us</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-black-50">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                            enim pariatur similique debitis vel nisi qui reprehenderit totam?
+                            Quod maiores.
+                        </p>
+                        <p class="text-black-50">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                            saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
+                            veniam sed blanditiis unde ullam maxime veritatis perferendis
+                            cupiditate, at non esse!
+                        </p>
+                        <p class="text-black-50">
+                            Enim, nisi labore exercitationem facere cupiditate nobis quod
+                            autem veritatis quis minima expedita. Cumque odio illo iusto
+                            reiciendis, labore impedit omnis, nihil aut atque, facilis
+                            necessitatibus asperiores porro qui nam.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-black-50">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                            saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
+                            veniam sed blanditiis unde ullam maxime veritatis perferendis
+                            cupiditate, at non esse!
+                        </p>
+                        <p class="text-black-50">
+                            Enim, nisi labore exercitationem facere cupiditate nobis quod
+                            autem veritatis quis minima expedita. Cumque odio illo iusto
+                            reiciendis, labore impedit omnis, nihil aut atque, facilis
+                            necessitatibus asperiores porro qui nam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-between mb-5">
+                <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
+                    <div class="img-about dots">
+                        <img src="{{ url_for('static', filename='images/hero_bg_3.jpg')}}" alt=" Image"
+                            class="img-fluid" />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-home2"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Quality properties</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-person"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Top rated agents</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-security"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Easy and safe</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-between mb-5">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="img-about dots">
+                        <img src="{{ url_for('static', filename='images/hero_bg_2.jpg')}}" alt="Image"
+                            class="img-fluid" />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-home2"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Quality properties</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-person"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Top rated agents</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex feature-h">
+                        <span class="wrap-icon me-3">
+                            <span class="icon-security"></span>
+                        </span>
+                        <div class="feature-text">
+                            <h3 class="heading">Easy and safe</h3>
+                            <p class="text-black-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum iste.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end about us -->
+
+
+    <!-- Testimonials -->
+
+    <div id="testimonials">
+
+        <div class="section sec-testimonials">
+            <div class="container">
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
+                            Customer Says
+                        </h2>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div id="testimonial-nav">
+                            <span class="prev" data-controls="prev">Prev</span>
+
+                            <span class="next" data-controls="next">Next</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                </div>
+                <div class="testimonial-slider-wrap">
+                    <div class="testimonial-slider">
+                        <div class="item">
+                            <div class="testimonial">
+                                <img src="{{ url_for('static', filename='images/hero_bg_1.jpg')}}" alt="Image"
+                                    class="img-fluid rounded-circle w-25 mb-4" />
+                                <div class="rate">
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                </div>
+                                <h3 class="h5 text-primary mb-4">James Smith</h3>
+                                <blockquote>
+                                    <p>
+                                        &ldquo;Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind
+                                        texts. Separated they live in Bookmarksgrove right at the
+                                        coast of the Semantics, a large language ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="text-black-50">Designer, Co-founder</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimonial">
+                                <img src="{{ url_for('static', filename='images/person_2-min.jpg')}}" alt="Image"
+                                    class="img-fluid rounded-circle w-25 mb-4" />
+                                <div class="rate">
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                </div>
+                                <h3 class="h5 text-primary mb-4">Mike Houston</h3>
+                                <blockquote>
+                                    <p>
+                                        &ldquo;Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind
+                                        texts. Separated they live in Bookmarksgrove right at the
+                                        coast of the Semantics, a large language ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="text-black-50">Designer, Co-founder</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimonial">
+                                <img src="{{ url_for('static', filename='images/person_3-min.jpg')}}" alt="Image"
+                                    class="img-fluid rounded-circle w-25 mb-4" />
+                                <div class="rate">
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                </div>
+                                <h3 class="h5 text-primary mb-4">Cameron Webster</h3>
+                                <blockquote>
+                                    <p>
+                                        &ldquo;Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind
+                                        texts. Separated they live in Bookmarksgrove right at the
+                                        coast of the Semantics, a large language ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="text-black-50">Designer, Co-founder</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimonial">
+                                <img src="{{ url_for('static', filename='images/person_4-min.jpg')}}" alt="Image"
+                                    class="img-fluid rounded-circle w-25 mb-4" />
+                                <div class="rate">
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                </div>
+                                <h3 class="h5 text-primary mb-4">Dave Smith</h3>
+                                <blockquote>
+                                    <p>
+                                        &ldquo;Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind
+                                        texts. Separated they live in Bookmarksgrove right at the
+                                        coast of the Semantics, a large language ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="text-black-50">Designer, Co-founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End Testimonials -->
+
+
+    <!-- Contact Us -->
+    <div id="contact-us" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info">
+                        <div class="address mt-2">
+                            <i class="icon-room"></i>
+                            <h4 class="mb-2">Location:</h4>
+                            <p>
+                                43 Raymouth Rd. Baltemoer,<br />
+                                London 3910
+                            </p>
+                        </div>
+
+                        <div class="open-hours mt-4">
+                            <i class="icon-clock-o"></i>
+                            <h4 class="mb-2">Open Hours:</h4>
+                            <p>
+                                Sunday-Friday:<br />
+                                11:00 AM - 2300 PM
+                            </p>
+                        </div>
+
+                        <div class="email mt-4">
+                            <i class="icon-envelope"></i>
+                            <h4 class="mb-2">Email:</h4>
+                            <p>info@Untree.co</p>
+                        </div>
+
+                        <div class="phone mt-4">
+                            <i class="icon-phone"></i>
+                            <h4 class="mb-2">Call:</h4>
+                            <p>+1 1234 55488 55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <form action="{{url_for('home.index')}}" method="post">
+                        {{ form.csrf_token }}
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                {{form.name(class="form-control", placeholder="Your Name")}}
+                            </div>
+                            <div class="col-6 mb-3">
+                                {{form.email(class="form-control", placeholder="Your Email")}}
+                            </div>
+                            <div class="col-12 mb-3">
+                                {{form.subject(class="form-control", placeholder="Subject")}}
+                            </div>
+                            <div class="col-12 mb-3">
+                                {{form.message(class="form-control", cols="30", rows="7", placeholder="Message")}}
+                            </div>
+
+                            <div class="col-12">
+                                <input type="submit" value="Send Message" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Us -->
+
+
+    <!-- Footer -->
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="widget">
+                        <h3>Contact</h3>
+                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+                        <ul class="list-unstyled links">
+                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                            <li>
+                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-2">
+                    <div class="widget">
+                        <h3>Sources</h3>
+                        <ul class="list-unstyled float-start links">
+                            <li><a href="#">About us</a></li>
+                            <!-- <li><a href="#">Services</a></li> -->
+                            <!-- <li><a href="#">Vision</a></li> -->
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-5">
+                    <div class="widget">
+                        <h3>Links</h3>
+                        <ul class="list-unstyled links">
+                            <!-- <li><a href="#">Our Vision</a></li> -->
+                            <li><a href="#about-us">About us</a></li>
+                            <li><a href="#contact-us">Contact us</a></li>
+                        </ul>
+
+                        <ul class="list-unstyled social">
+                            <li>
+                                <a href="#"><span class="icon-instagram"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-facebook"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-linkedin"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-pinterest"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-dribbble"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <!-- 
+                **==========
+                NOTE: 
+                Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+                **==========
+              -->
+
+                    <p>
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        . All Rights Reserved. &mdash; Designed with love by
+                        <a href="https://untree.co">Untree.co</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- End Footer -->
+
+
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/tiny-slider.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/counter.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+</body>
+</html>
