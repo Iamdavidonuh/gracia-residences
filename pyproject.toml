@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gracia-residences"
+version = "0.1.0"
+description = ""
+authors = ["David Onuh <davidonuh1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.1"
+flask-mail = "^0.9.1"
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
