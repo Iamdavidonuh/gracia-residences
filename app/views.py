@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for
+from flask import Blueprint, redirect, render_template, request, url_for, flash
 from flask_mail import Message
 from app import forms, mail
 
@@ -22,5 +22,8 @@ def index():
         )
         message.add_recipient("info@graciaresidences.com")
         mail.send(message)
-        return redirect(url_for("home.index"))
+        flash(
+            "We've recevied your message. Someone from our team will contact you soon."
+        )
+        return redirect(f'{url_for("home.index")}#contact-us')
     return render_template("index.html", form=form)
