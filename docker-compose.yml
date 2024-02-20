@@ -1,0 +1,15 @@
+services:
+
+  web:
+    build: .
+    restart: on-failure
+    command: gunicorn main:app --bind 0.0.0.0:5000 --access-logfile - --workers 3
+    ports:
+      - "5000:5000"
+
+  nginx:
+    build: ./deployments/nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
