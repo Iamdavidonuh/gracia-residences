@@ -9976,10 +9976,10 @@ textarea {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-    .feature-h .wrap-icon [class^="icon-"] {
+    .feature-h .wrap-icon [class^="icon-"],.feature-h .wrap-icon [class^="ti-"]  {
       position: absolute;
       left: 50%;
-      font-size: 20px;
+      font-size: 35px;
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -9989,7 +9989,7 @@ textarea {
     .feature-h .feature-text .heading {
       font-size: 18px; }
   .feature-h:hover .wrap-icon, .feature-h:focus .wrap-icon {
-    border: 2px solid #00204a;
+    border: 2px solid #dc3545/*2px solid #00204a*/;
     background-color: transparent;
     -webkit-transform: scale(1.07);
     -ms-transform: scale(1.07);
