@@ -1,7 +1,10 @@
-FROM python:3.11
+FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+
+RUN apt update && apt -y upgrade  && apt install -y curl
+
 ENV POETRY_HOME="/opt/poetry" \
     POETRY_VERSION=1.7.0
 ENV PATH="$POETRY_HOME/bin:$PATH"
@@ -12,11 +15,11 @@ RUN poetry config virtualenvs.create false
 
 WORKDIR /gracias
 
-COPY poetry.lock /app
-COPY pyproject.toml /app
+COPY poetry.lock /gracias
+COPY pyproject.toml /gracias
 RUN poetry install --no-root
 
-COPY . /app
+COPY . /gracias
 EXPOSE 5000
 
 CMD [ "flask",  "--app",  "app", "run", "--debug", "-h" "0.0.0.0" "-p" "5000" ]
