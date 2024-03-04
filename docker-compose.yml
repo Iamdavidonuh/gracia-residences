@@ -6,6 +6,8 @@ services:
     command: gunicorn main:app --bind 0.0.0.0:5000 --access-logfile - --workers 3
     ports:
       - "5000:5000"
+    env_file:
+      - .env
 
     volumes:
       - static_volume:/gracias/web/app/static/
