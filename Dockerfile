@@ -22,4 +22,4 @@ RUN poetry install --no-root
 COPY . /gracias
 EXPOSE 5000
 
-CMD [ "flask",  "--app",  "app", "run", "--debug", "-h" "0.0.0.0" "-p" "5000" ]
+CMD [ "flask",  "--app",  "app", "run", "-h" "0.0.0.0" "-p" "5000" ]

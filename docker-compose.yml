@@ -8,14 +8,14 @@ services:
       - "5000:5000"
 
     volumes:
-      - static_volume:/gracias/app/static/
+      - static_volume:/gracias/web/app/static/
 
   nginx:
     build: ./deployments/nginx
     ports:
       - 80:80
     volumes:
-      - static_volume:/gracias/app/static/
+      - static_volume:/gracias/web/app/static/
     depends_on:
       - web
 
