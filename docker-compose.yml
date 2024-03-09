@@ -16,6 +16,7 @@ services:
     build: ./deployments/nginx
     ports:
       - 80:80
+      - 443:443
     volumes:
       - static_volume:/gracias/web/app/static/
       - ./deployments/nginx:/etc/nginx/conf.d/:ro
