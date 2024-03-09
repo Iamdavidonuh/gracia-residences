@@ -11,9 +11,9 @@ services:
 
     volumes:
       - static_volume:/gracias/web/app/static/
-      - ./deployments/nginx:/etc/nginx/conf.d/:ro
-      - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/nginx/ssl/:ro
+      - /home/owiekris/gracia-residences/deployments/nginx:/etc/nginx/conf.d/:ro
+      - /home/owiekris/gracia-residences/certbot/www:/var/www/certbot/:ro
+      - /home/owiekris/gracia-residences/certbot/conf/:/etc/nginx/ssl/:ro
 
   nginx:
     build: ./deployments/nginx
@@ -27,8 +27,8 @@ services:
   certbot:
     image: certbot/certbot:latest
     volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - /home/owiekris/gracia-residences/certbot/www/:/var/www/certbot/:rw
+      - /home/owiekris/gracia-residences/certbot/conf/:/etc/letsencrypt/:rw
 
 volumes:
   static_volume:
